@@ -1,0 +1,6 @@
+{
+  "name": "CS684: embedded and real-time systems",
+  "tagline": "Using TivaC Launchpad,  Embedded and Real-Time Systems Lab, Department of Computer Science and Engineering",
+  "body": "### Welcome to the Embedded and Real-Time Systems Course\r\nThis course is taught by Prof. Kavi Arya and Prof. Krithi Ramamritham\r\n\r\n### Course Outline\r\n## Part 1\r\n1. Introduction to the ARM® Cortex™ M4F and Peripherals\r\n2. Introduction to Code Composer Studio and Energia\r\n3. Understanding Tiva Ware, Initialization, and GPIO\r\n4. Interrupts and the Timers\r\n5. PWM and Servo Motor Interfacing\r\n6. ADC and Interfacing Joystick\r\n7. UART and Interfacing LCD (16x2)\r\n8. USB\r\n9. Interfacing Sensors(LM35) and using the Hibernation Module\r\n\r\n**Advanced Topics**\r\n\r\n1. Memory and Security (EEPROM)\r\n2. SPI, I2C and IMU Interfacing (Optional: Synchronous Serial Interface)\r\n3  The Floating Point Unit (Generating Sine wave and profiling)\r\n4. uDMA (Transfer large data to and from UART using uDMA)\r\n\r\n## Part 2\r\n1. Basic concepts of Operating Systems\r\n2. Interfacing Graphics LCD\r\n3. LED blinking using HWI and SWI\r\n4. Experiments based tasks, mutex, semaphores, and locks\r\n\r\n## Mini Project\r\n* Game development based on the concepts learned",
+  "note": "Don't delete this file! It's used internally to help with page regeneration."
+}
