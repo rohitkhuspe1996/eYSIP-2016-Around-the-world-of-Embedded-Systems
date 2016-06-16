@@ -3,7 +3,7 @@
  *  1. Use the inbuilt ADC to interface a joystick with Tiva Board. The analog values read from the joystick has to be converted to digital and displayed on the watch window of the CCS IDE.
  *  2. Now, use the inbuilt UART to communicate the digital values (i.e. both the X axis and the Y axis) to the computer. Use a terminal emulation software like Serial Terminal or Real Term
  *      to view the data being sent by the Tiva Board to your computer.
- *     The data sent should have the following syntax : îX: Digital equivalent of the read valueî îY: Digital equivalent of the read valueî
+ *     The data sent should have the following syntax : ‚ÄùX: Digital equivalent of the read value‚Äù ‚ÄùY: Digital equivalent of the read value‚Äù
  *  3. Once you complete the above mentioned problem statements, you have to depict the values received in a graphical representation. In short, create a GUI which tracks the real time movements
  *     of the joystick.
  *     The circle marker should move to the left if the joystick button
@@ -129,7 +129,18 @@ int main(void)
 		ADCSequenceDataGet(ADC0_BASE, 1, ui32ADC1Value);
 		x =  (ui32ADC1Value[0] + ui32ADC1Value[1] + ui32ADC1Value[2] + ui32ADC1Value[3] + 2)/4;
 		x=x/640;
-
+		if(x<3){
+			x=0;
+		}
+		if(x>3){
+			x=6;
+		}
+		if(y<3){
+			y=0;
+		}
+		if(y>3){
+			y=6;
+		}
 		if(temp1!=x)
 		{
 			char1=convertt(x);
