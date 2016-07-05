@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 from drawnow import *
 
 plt.ion()
-Data=serial.Serial('com5',timeout=None,baudrate=9600) # read serial data from com5 with 9600 Baudrate
+Data=serial.Serial('com4',timeout=None,baudrate=9600) # read serial data from com5 with 9600 Baudrate
 
 
 def makefig():
