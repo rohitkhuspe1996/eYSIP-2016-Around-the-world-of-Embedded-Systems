@@ -23,35 +23,33 @@ volatile uint32_t z;	      //variable containing white line data on right side
 volatile uint32_t x;          //  variable which holds the digital value after analog to digital conversion of middle white line sensor.
 volatile uint32_t y;          //  variable which holds the digital value after analog to digital conversion of left white line sensor.
 
-/* char convertt is a function which converts the data to be transmitted in 8 bit form. The argument to the function is X or Y co-ordinate
- * of the Joystick location. It returns 8 bit value of the data to be transmitted.
- */
+
 
 void forward(){
 	ui8LED=9;
 	GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_0| GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,ui8LED);
-	//SysCtlDelay(67000);
+	
 }
 void back(){
 	ui8LED=6;
     GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_0| GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,ui8LED);
-    //SysCtlDelay(67000);
+   
 }
 
 void right(){
 	ui8LED=5;
 	GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_0| GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,ui8LED);
-	//SysCtlDelay(67000);
+
 }
 void left(){
 	ui8LED=10;
 	GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_0| GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,ui8LED);
-	//SysCtlDelay(67000);
+	
 }
 void stop(){
 	ui8LED=0;
-		GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_0| GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,ui8LED);
-		//SysCtlDelay(67000);
+        GPIOPinWrite(GPIO_PORTD_BASE,GPIO_PIN_0| GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3,ui8LED);
+		
 
 }
 uint32_t pui32Data[2];
@@ -70,20 +68,20 @@ int main(void)
 	EEPROMRead(pui32Read, 0x100, sizeof(pui32Read));//read data from eeprom
 	
 	
-	uint32_t ui32ADC0Value[4];
-	uint32_t ui32ADC1Value[4];
-	uint32_t ui32ADC2Value[4];
+	uint32_t ui32ADC0Value[4]; //storing aberage value of the variable
+	uint32_t ui32ADC1Value[4];  //storing average value of variable
+	uint32_t ui32ADC2Value[4];   //storing average value of variable
 	/* Set up the System Clock */
-	SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_OSC_MAIN|SYSCTL_XTAL_16MHZ);
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);
-	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
+	SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_OSC_MAIN|SYSCTL_XTAL_16MHZ);  
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOF);   //enable the portf
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);    //enable the portd
 	HWREG(GPIO_PORTF_BASE + GPIO_O_LOCK)= GPIO_LOCK_KEY;	// unlocking sw2 switch
         HWREG(GPIO_PORTF_BASE + GPIO_O_CR) |= 0x01;
         HWREG(GPIO_PORTF_BASE + GPIO_O_LOCK)= 0;
 
-	GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE,GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3);
+	GPIOPinTypeGPIOOutput(GPIO_PORTD_BASE,GPIO_PIN_0|GPIO_PIN_1|GPIO_PIN_2|GPIO_PIN_3); //configure pin as a output
 	//Configure PWM Clock to match system
-	   SysCtlPWMClockSet(SYSCTL_PWMDIV_1);
+	   SysCtlPWMClockSet(SYSCTL_PWMDIV_1);  //pwm pin
 
 
 	/* Enable ADC Peripheral. We use ADC0 and ADC1 for simultaneous conversion of analog values(X znd Y co-ordinates).
@@ -215,27 +213,27 @@ int main(void)
 
 void Timer0IntHandler(void)
 {
-							TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);     //clear the timer
+				TimerIntClear(TIMER0_BASE, TIMER_TIMA_TIMEOUT);     //clear the timer
 
-							led1=GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_4);		/* reading the data from input port sw1 */
-							if((led1 & GPIO_PIN_4)==0 ){
+				led1=GPIOPinRead(GPIO_PORTF_BASE,GPIO_PIN_4);		/* reading the data from input port sw1 */
+				if((led1 & GPIO_PIN_4)==0 ){
 								
 
-								stop();
-								SysCtlDelay(20*6700000);   //wait for some duration
-								SysCtlDelay(67000);
-								pui32Data[0]=y;            //storing value of sensor
-								pui32Data[0]=pui32Data[0]+40;  //maximum possible value for white line
-								right();
-								pui32Data[1]=x;
-								SysCtlDelay(6700000);
-								left();
-								SysCtlDelay(6700000);    //maximum possible value for black line
+				stop();
+				SysCtlDelay(20*6700000);   //wait for some duration
+				SysCtlDelay(67000);
+				pui32Data[0]=y;            //storing value of sensor
+				pui32Data[0]=pui32Data[0]+40;  //maximum possible value for white line
+				right();
+				pui32Data[1]=x;
+				SysCtlDelay(6700000);
+				left();
+				SysCtlDelay(6700000);    //maximum possible value for black line
 
-								stop();
-								EEPROMProgram(pui32Data, 0x100, sizeof(pui32Data));//store the new value in eeprom
-								forward();
-							}
+				stop();
+				EEPROMProgram(pui32Data, 0x100, sizeof(pui32Data));//store the new value in eeprom
+				forward();
+				}
 
 }
 
