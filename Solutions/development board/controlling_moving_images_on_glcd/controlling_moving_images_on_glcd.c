@@ -15,6 +15,7 @@
 #include "driverlib/sysctl.h"
 #include "driverlib/gpio.h"
 #include "inc/tm4c123gh6pm.h"
+#include "driverlib/adc.h"
 #include "driverlib/debug.h"
 #include "driverlib/pin_map.h"
 #include "inc/hw_gpio.h"
@@ -226,6 +227,12 @@ int main()
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOC);
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOD);
 
+    /* Enable the ADC */
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC0);
+	SysCtlPeripheralEnable(SYSCTL_PERIPH_ADC1);
+	GPIOPinTypeADC(GPIO_PORTD_BASE, GPIO_PIN_0);
+	GPIOPinTypeADC(GPIO_PORTD_BASE, GPIO_PIN_1);
+
 	/* Unlock pin PF0 */
 	HWREG(GPIO_PORTF_BASE + GPIO_O_LOCK)= GPIO_LOCK_KEY;
     HWREG(GPIO_PORTF_BASE + GPIO_O_CR) |= 0x01;
@@ -260,26 +267,34 @@ int main()
 
     while(1)
     {
+     /* Clear the ADC interrupt flag and start the conversion process */
     ADCIntClear(ADC1_BASE, 3);
     ADCProcessorTrigger(ADC1_BASE, 3);
+
+    /* Wait till conversion is complete */
     while(!ADCIntStatus(ADC1_BASE, 3, false))
     {
     }
+
+    /* Clear the ADC interrupt flag and get the conversion result */
     ADCIntClear(ADC1_BASE, 3);
     ADCSequenceDataGet(ADC1_BASE, 3,&ui32ADC0Value);
+
+    /*Divide the result of ADC to get delay */
     y =  ui32ADC0Value;
     if(y<200)
     {
-        delay=7000000;
+        delay=100000;
     }
     else if(y>3900)
     {
-        delay=90000;
+        delay=670000;
     }
     else
     {
-        delay = 600000;
+        delay = 1000000;
     }
+
     j=0;
     p=0;
     while(p<8)
