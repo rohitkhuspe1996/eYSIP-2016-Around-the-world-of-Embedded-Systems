@@ -152,15 +152,15 @@ off when switch is released. Show the result to TA.
 \item Part 2\\
 Use switch SW2 and sw2Status (a variable). The program should increment sw2Status by
 one, every time switch is pressed. Note how the value of sw2Status changes on each switch press.
-Use debugger and add sw2Status to “Watch Expression” window. Does the value of
+Use debugger and add sw2Status to ?Watch Expression? window. Does the value of
 sw2Status increment by one always?  Show the result to TA.
 \\\textbf{Note:} Define sw2Status as a global variable and in debug perspective use continuous refresh option
 (The Continuous Refresh button is on top of the Expression Window).Step debugging
 or breakpoints can be used to check the variable value.
 \\
 \\
-\textbf{Hint}:\textit{To add variable to Expression Window, select and right click the variable name and select “Add
-Watch Expression”. To view Expression Window, click on View button from CCS menu bar and
+\textbf{Hint}:\textit{To add variable to Expression Window, select and right click the variable name and select ?Add
+Watch Expression?. To view Expression Window, click on View button from CCS menu bar and
 select Expressions.}
 \item Part 3\\
 Configure SW1 and SW2 such that:
@@ -175,9 +175,9 @@ and Blue.
  
 \section {Relevant Theory}
 \begin{enumerate}
-\item Refer \textit {TM4C123G\_LaunchPad\_Workshop\_Workbook} available on course web page.Texas Instrument “TM4C123G
-LaunchPad Workshop - Student Guide and Lab Manual”.Refer Chapter-3
-“Introduction to TivaWare, Initialization and GPIO” of the Manual.
+\item Refer \textit {TM4C123G\_LaunchPad\_Workshop\_Workbook} available on course web page.Texas Instrument ?TM4C123G
+LaunchPad Workshop - Student Guide and Lab Manual?.Refer Chapter-3
+?Introduction to TivaWare, Initialization and GPIO? of the Manual.
 \item Use TivaWare Peripheral Driver Library, an API written by Texas Instrument to
 access different peripherals and functionality of ARM Cortex-M based micro controller. 
 \end{enumerate}
@@ -276,14 +276,14 @@ Lab 1: Interfacing RGB LED and switches (SW1 and SW2).
 \section{Problem Statement}
 \begin{enumerate}
 \item Part 1 \\
-Use SW1 to change the color of the RGB LED (R$\Rightarrow$ G$\Rightarrow$ B$\Rightarrow$ R….) where switch is pressed just once instead of long press in Lab 1. Use switch debouncing mentioned below in the procedure to differentiate between switch bounce and actual key press.
+Use SW1 to change the color of the RGB LED (R$\Rightarrow$ G$\Rightarrow$ B$\Rightarrow$ R?.) where switch is pressed just once instead of long press in Lab 1. Use switch debouncing mentioned below in the procedure to differentiate between switch bounce and actual key press.
 \item Part 2 \\
 Use SW2 to increment a global variable once for each button press. Check if the variable always increments by one (adjust the time interval of 10 ms if required)
 \end{enumerate}
  %------------------sub section Relevant theory--------------------------------------
  
 \section {Relevant Theory}
-A timer is used to generate interrupts and a timer interrupt service routine (ISR) that implements a state machine to perform \textbf{“software button debouncing”}.
+A timer is used to generate interrupts and a timer interrupt service routine (ISR) that implements a state machine to perform \textbf{?software button debouncing?}.
 \begin{figure}
 \centering
 \includegraphics[scale=0.8]{bounce.PNG}
@@ -448,10 +448,12 @@ At initial, when program is loaded controller will be in Auto mode. Combination 
   \item The pattern must follow the color circle as shown in Figure 1.
   \item In Auto mode SW1 will increase the speed of color transition and SW2 will decrease the speed.
 \end{itemize}
-
+\begin{figure}
 \centerline{\includegraphics[scale=0.8]{RGB_color_circle.png}}
-RGB Color Wheel
 \footnote{Image Courtesy: https://en.wikibooks.org/wiki/File:RGB\_color\_circle.png accessed on 05/06/2016}
+\caption{RGB Color Wheel}
+\end{figure}
+
 \item Manual mode
 \begin{itemize}
 \item In Manual mode, user must be able to select any one of the color from the color circle. For this
@@ -893,7 +895,7 @@ The codes for interfacing push buttons, LEDs, 16X2 LCD, 128X64 GLCD and Analog T
   \item 128X64 GLCD\\
   \href{http://www.agspecinfo.com/pdfs/J/JHD12864.PDF}{JHD12864A Datasheet}\\
   \item Schematic of Development Board\\~\\
-  \includegraphics[scale = 0.4]{Gameconsol.pdf}
+  \includegraphics[scale = 0.5]{Gameconsol.pdf}
 \end{itemize}
 
 %-------------- s/w used -------------------------
@@ -911,27 +913,49 @@ The codes for interfacing push buttons, LEDs, 16X2 LCD, 128X64 GLCD and Analog T
 \newpage
 \section{Pin Mapping}
 
+
+
 \begin{table}[]
 \centering
-\begin{tabular}{lll}
-1.  & PC7        & SW1                      \\
-2.  & PD6        & SW2                      \\
-3.  & PD7        & SW3                      \\
-4.  & PF4        & SW4                      \\
-5.  & PF1        & LED1                     \\
-6.  & PC5        & LED2                     \\
-7.  & PB2        & LED3                     \\
-8.  & PF3        & LED4                     \\
-9.  & PD0        & V of Joystick            \\
-10. & PD1        & H of Joystick            \\
-11. & PE0 to PE3 & D0 to D3 of LCD and GLCD \\
-12. & PB4 to PB7 & D4 to D7 of LCD and GLCD \\
-13. & PC6        & RS for LCD and GLCD      \\
-14. & PF0        & Enable of LCD and GLCD   \\
-15. & PD3        & CS2 of  GLCD             \\
-16  & Not PD3    & CS1 of GLCD              \\
-17  & PE5        & RST of GLCD             
-\end{tabular}
+\begin{tabular}{|c|c|c|}
+\hline 
+Sr No. & Pin Number & Connected to \\ 
+\hline 
+1. & PC7 & SW1 \\ 
+\hline 
+2 & PD6 & SW2 \\ 
+\hline 
+3. & PD7 & SW3 \\ 
+\hline 
+4. & PF4 & SW4 \\ 
+\hline 
+5. & PF1 & LED1 \\ 
+\hline 
+6. & PC5 & LED2 \\ 
+\hline 
+7. & PB2 & LED3 \\ 
+\hline 
+8. & PF3 & LED3 \\ 
+\hline 
+9. & PD0 & V of Joystick \\ 
+\hline 
+10. & PD1 & H of Joystick \\ 
+\hline 
+11. & PE0 to PE3 & D0 to D3 of LCD and GLCD \\ 
+\hline 
+12. & PB4 to PB7 & D4 to D7 of LCD and GLCD \\ 
+\hline 
+13. & PC6 & RS for LCD and GLCD \\ 
+\hline 
+14. & PF0 & Enable of LCD and GLCD \\ 
+\hline 
+15. & PD3 & CS2 of GLCD \\ 
+\hline 
+16. & Not PD3 & CS1 of GLCD \\ 
+\hline 
+17. & PE5 & RST of GLCD \\ 
+\hline 
+\end{tabular} 
 \caption{Pin mapping}
 \end{table}
 
