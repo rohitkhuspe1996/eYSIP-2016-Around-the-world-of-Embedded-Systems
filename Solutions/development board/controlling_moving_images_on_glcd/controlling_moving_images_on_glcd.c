@@ -213,8 +213,11 @@ void glcd_cleardisplay()
 int main()
 {
     int i,j,p;
-	uint32_t ui32ADC0Value,y;
+	uint32_t ui32ADC0Value,y;    // Variable to store the value of digital data after conversion
 	int delay;
+
+    /* Set up the System Clock */
+	SysCtlClockSet(SYSCTL_SYSDIV_5|SYSCTL_USE_PLL|SYSCTL_OSC_MAIN|SYSCTL_XTAL_16MHZ);
 
 	/* Enable all the peripherals */
 	SysCtlPeripheralEnable(SYSCTL_PERIPH_GPIOB);
