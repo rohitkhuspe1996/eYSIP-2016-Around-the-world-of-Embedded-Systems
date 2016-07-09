@@ -1,3 +1,4 @@
+
 \documentclass{article} % Especially this!
 
 \usepackage[english]{babel}
@@ -26,7 +27,34 @@
 
 \epstopdfDeclareGraphicsRule{.gif}{png}{.png}{convert gif:#1 png:\OutputFile}
 \AppendGraphicsExtensions{.gif}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%  _______ ______          _____ _    _ ______ _____  	%
+% |__   __|  ____|   /\   / ____| |  | |  ____|  __ \ 	%
+%    | |  | |__     /  \ | |    | |__| | |__  | |__) |	%
+%    | |  |  __|   / /\ \| |    |  __  |  __| |  _  / 	%
+%    | |  | |____ / ____ \ |____| |  | | |____| | \ \ 	%
+%    |_|  |______/_/    \_\_____|_|  |_|______|_|  \_\	%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%														%
+% 			COMMANDS				SUMMARY				%
+% \clarity{points}{comment} >>> "Clarity of Writing"	%
+% \other{points}{comment}	>>> "Other"					%
+% \spelling{comment}		>>> "Spelling"				%
+% \units{comment}			>>> "Units"					%
+% \english{comment}			>>> "Syntax and Grammer"	%
+% \source{comment}			>>> "Sources"				%
+% \concept{comment}			>>> "Concept"				%
+% \missing{comment}			>>> "Missing Content"		%
+% \maths{comment}			>>> "Math"					%
+% \terms{comment}			>>> "Science Terms"			%
+%														%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \setlength{\marginparwidth}{3.4cm}
 
 
@@ -180,7 +208,7 @@ Refer to the Figure 1, the circle marker should move to the left if the joystick
 \end{enumerate}
 \begin{figure}
 \centering
-\includegraphics[scale=0.4]{joystickgui.jpg}
+\includegraphics[scale=0.4]{joystickgui.png}
 \caption{Joystick Graphical interface}
 \end{figure}
 
@@ -237,7 +265,7 @@ Once you start receiving your required data, you can use matplotlib and drawnow 
 	Include "adc.h" and "uart.h" header files.\\
     Enable ADC0 and ADC1 peripherals. Enable and configure the UART pins. Set the required Baud rate. \\
     Wait till ADC conversion is complete. Average the data obtained. This is then converted according to requirements. Send the ASCII value of this data to PC using UART.
-\item To create GUI :\\
+\item To create GUI\\
 	Import serial library, matplotlib, numpy.\\
     Read the serial data.\\
     Enable the interactive plot using plt.ion() function.\\
@@ -252,4 +280,76 @@ Once you start receiving your required data, you can use matplotlib and drawnow 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 You have to shoot two individual videos demonstrating the output of the problem statement.
 Your codes for each of the problem statement has to be uploaded in Github repository.
+
+
+
+
+
+
+
+
+%\subsection{Definitions}
+% Include your sources!
+%%%%%%%%%%%%%%%%%%%%%%%
+% LIST OF DEFINITIONS
+% \begin{description}
+% \item [WORD] {Definition}
+% \end{description}
+%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+%\subsection{Results}
+% State your main discovery based on the experimental data.
+
+
+
+
+
+
+%\subsection{Questions}
+% Write full question and format answers in ITALIC
+% CTRL + I for ITALIC
+
+
+
+
+
+
+
+
+
+
+
+%  _____  ____  _    _ _____   _____ ______  _____ 
+% / ____|/ __ \| |  | |  __ \ / ____|  ____|/ ____|
+%| (___ | |  | | |  | | |__) | |    | |__  | (___  
+% \___ \| |  | | |  | |  _  /| |    |  __|  \___ \ 
+% ____) | |__| | |__| | | \ \| |____| |____ ____) |
+%|_____/ \____/ \____/|_|  \_\\_____|______|_____/ 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+% USE NOCITE TO ADD SOURCES TO THE BIBLIOGRAPHY WITHOUT SPECIFICALLY CITING THEM IN THE DOCUMENT
+
+%\nocite{ref_num}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+			% BIBLIOGRAPHY: %
+
+% Make sure your class *.bib file is uploaded to this project by clicking the project button > add files. Change 'sample' below to the name of your file without the .bib extension.
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%\bibliographystyle{plainnat}
+%\bibliography{sample}
+
+% UNCOMMENT THE TWO LINES ABOVE TO ENABLE BIBLIOGRAPHY
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \end{document} % NOTHING AFTER THIS LINE IS PART OF THE DOCUMENT
