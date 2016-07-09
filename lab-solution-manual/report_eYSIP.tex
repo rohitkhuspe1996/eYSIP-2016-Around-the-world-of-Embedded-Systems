@@ -152,15 +152,15 @@ off when switch is released. Show the result to TA.
 \item Part 2\\
 Use switch SW2 and sw2Status (a variable). The program should increment sw2Status by
 one, every time switch is pressed. Note how the value of sw2Status changes on each switch press.
-Use debugger and add sw2Status to ?Watch Expression? window. Does the value of
+Use debugger and add sw2Status to “Watch Expression” window. Does the value of
 sw2Status increment by one always?  Show the result to TA.
 \\\textbf{Note:} Define sw2Status as a global variable and in debug perspective use continuous refresh option
 (The Continuous Refresh button is on top of the Expression Window).Step debugging
 or breakpoints can be used to check the variable value.
 \\
 \\
-\textbf{Hint}:\textit{To add variable to Expression Window, select and right click the variable name and select ?Add
-Watch Expression?. To view Expression Window, click on View button from CCS menu bar and
+\textbf{Hint}:\textit{To add variable to Expression Window, select and right click the variable name and select “Add
+Watch Expression”. To view Expression Window, click on View button from CCS menu bar and
 select Expressions.}
 \item Part 3\\
 Configure SW1 and SW2 such that:
@@ -175,13 +175,13 @@ and Blue.
  
 \section {Relevant Theory}
 \begin{enumerate}
-\item Refer \textit {TM4C123G\_LaunchPad\_Workshop\_Workbook} available on course web page.Texas Instrument ?TM4C123G
-LaunchPad Workshop - Student Guide and Lab Manual?.Refer Chapter-3
-?Introduction to TivaWare, Initialization and GPIO? of the Manual.
+\item Refer \textit {TM4C123G\_LaunchPad\_Workshop\_Workbook} available on course web page.Texas Instrument “TM4C123G
+LaunchPad Workshop - Student Guide and Lab Manual”.Refer Chapter-3
+“Introduction to TivaWare, Initialization and GPIO” of the Manual.
 \item Use TivaWare Peripheral Driver Library, an API written by Texas Instrument to
 access different peripherals and functionality of ARM Cortex-M based micro controller. 
 \end{enumerate}
-
+\newpage
 %--------------------------------hardware assembly ---------------
 \section{Assembly of Hardware}
 In this Lab external hardware connections are not required.\\
@@ -241,6 +241,7 @@ include <time.h>
 \end{enumerate}
 
 %------------------------- Code ----------------------------%
+\newpage
 \section{Code}
 \begin{enumerate}
 \item \href{https://github.com/eYSIP-2016/eYSIP-2016-Around-the-world-of-Embedded-Systems/blob/origin/master/Solutions/lab1\%20solutions/lab_1-problem1.c}{Github link} for solution to Part 1.
@@ -275,14 +276,14 @@ Lab 1: Interfacing RGB LED and switches (SW1 and SW2).
 \section{Problem Statement}
 \begin{enumerate}
 \item Part 1 \\
-Use SW1 to change the color of the RGB LED (R$\Rightarrow$ G$\Rightarrow$ B$\Rightarrow$ R?.) where switch is pressed just once instead of long press in Lab 1. Use switch debouncing mentioned below in the procedure to differentiate between switch bounce and actual key press.
+Use SW1 to change the color of the RGB LED (R$\Rightarrow$ G$\Rightarrow$ B$\Rightarrow$ R….) where switch is pressed just once instead of long press in Lab 1. Use switch debouncing mentioned below in the procedure to differentiate between switch bounce and actual key press.
 \item Part 2 \\
 Use SW2 to increment a global variable once for each button press. Check if the variable always increments by one (adjust the time interval of 10 ms if required)
 \end{enumerate}
  %------------------sub section Relevant theory--------------------------------------
  
 \section {Relevant Theory}
-A timer is used to generate interrupts and a timer interrupt service routine (ISR) that implements a state machine to perform \textbf{?software button debouncing?}.
+A timer is used to generate interrupts and a timer interrupt service routine (ISR) that implements a state machine to perform \textbf{“software button debouncing”}.
 \begin{figure}
 \centering
 \includegraphics[scale=0.8]{bounce.PNG}
@@ -333,6 +334,7 @@ else remain in release state until key is released.
 
 
 %--------------------------------hardware assembly ---------------
+\newpage
 \section{Assembly of Hardware}
 In this Lab external hardware connections are not required.\\
 The PORT pins which will be required are 
@@ -399,7 +401,7 @@ In ISR check whether the switch is pressed after an interval of 10ms twice.\\
 If this condition is satisfied then increment the value of \textit{sw2status}.
 \end{enumerate}
 %-------------------------- sub section code ---------------------
-\newpage
+
 \section{Code}
 \begin{enumerate}
 \item \href{https://github.com/eYSIP-2016/eYSIP-2016-Around-the-world-of-Embedded-Systems/blob/origin/master/Solutions/lab2\%20solutions/lab2_1solution.c}{Github link} for solution to Part 1.
@@ -713,7 +715,7 @@ Send lower 4 bit\\
 After sending data to the PORT generate a high to low enable pulse \\
 Give delay of microsecond at end\\
 \end{enumerate}
-
+\newpage
 \subsection{For external temperature conversion:}
 \begin{enumerate}
 \item Configure ADC1 chip.
@@ -789,6 +791,15 @@ It follows white line and goes to auto mode and stores value in eeprom.
 \item Power Bank
 \item Two wheel
 \end{enumerate}
+
+\section{Pin Diagram:}
+\begin{enumerate}
+\item
+
+\includegraphics[width=400 px]{pin.png}
+
+\end{enumerate}
+
 \section{Assembly of hardware:}
 \begin{enumerate}
 \item Hardware required for assembly.
@@ -811,7 +822,7 @@ It follows white line and goes to auto mode and stores value in eeprom.
 
 \item Now on genral pcb make the connection as shown in figure.
 
-\includegraphics[width=300 px]{img7.png}
+\includegraphics[width=300 px]{pcb.png}
 
 \item Connect the motor driver ic, white line sensor with tiva. Now,load the program and on the debug mode.Add variable x,y,z as watch expression and observe the value on computer.This procedure enables to varify if robot is working properly or not. 
 
@@ -849,11 +860,12 @@ It follows white line and goes to auto mode and stores value in eeprom.
 \section{Code}
 \href{https://https://github.com/eYSIP-2016/eYSIP-2016-Around-the-world-of-Embedded-Systems/blob/origin/master/Solutions/Linefollower/linefollower.c}{Github link} for all the codes required for this project.
 
+\section{Demonstration Video}
+
+\href{http://10.129.139.139/videos/Project-Line_Follower.html}{Demo video link} \\
+(These videos can be accessed only in IIT Bombay Campus)
 
 
-
-
- 
 
 
 %-------------------------------- project 2-------- development board ---
@@ -1027,11 +1039,14 @@ GLCD_TIVA_Launchpad.html}{GLCD Interfacing Tutorial}
 \begin{enumerate}
 \item Final Setup Image\\~\\
 \includegraphics[scale=0.5]{abc.PNG}
-
+\newpage
 \item Joystick position displayed on GLCD.\\~\\
 \includegraphics[scale=0.07]{20160708_113016.jpg}
 \item Image displayed on GLCD.\\~\\
 \includegraphics[scale=0.07]{20160706_152740.jpg}
+\newpage
+\item Moving image on GLCD\\~\\
+\includegraphics[scale = 0.525]{moving.PNG}
 
 \end{enumerate}
 
@@ -1047,7 +1062,7 @@ Pin number PB6 and PB7 are internally connected in TIVA Board with PD0 and PD1. 
 For testing the code data lines PB4 to PB7 of GLCD were replaced with PA4 to PA7 and the output was obtained.\\
 To use PB4 and PB7 as output data lines and PD0 and PD1 as analog input pins, resistors R9 and R10 on TIVA board were de-soldered.
 
-\newpage
+
 
 
 %---------------------------------------------
