@@ -1,8 +1,80 @@
 \BOOKMARK [0][-]{chapter.1}{Project Tag}{}% 1
 \BOOKMARK [1][-]{section.1.1}{Hardware parts}{chapter.1}% 2
 \BOOKMARK [1][-]{section.1.2}{Software used}{chapter.1}% 3
-\BOOKMARK [1][-]{section.1.3}{Assembly of hardware}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.4}{Software and Code}{chapter.1}% 5
-\BOOKMARK [1][-]{section.1.5}{Use and Demo}{chapter.1}% 6
-\BOOKMARK [1][-]{section.1.6}{Future Work}{chapter.1}% 7
-\BOOKMARK [1][-]{section.1.7}{Bug report and Challenges}{chapter.1}% 8
+\BOOKMARK [0][-]{chapter.2}{Initialization and GPIO}{}% 4
+\BOOKMARK [1][-]{section.2.1}{Lab Objective}{chapter.2}% 5
+\BOOKMARK [1][-]{section.2.2}{Pre-requisites}{chapter.2}% 6
+\BOOKMARK [1][-]{section.2.3}{Problem Statement}{chapter.2}% 7
+\BOOKMARK [1][-]{section.2.4}{Relevant Theory}{chapter.2}% 8
+\BOOKMARK [1][-]{section.2.5}{Assembly of Hardware}{chapter.2}% 9
+\BOOKMARK [1][-]{section.2.6}{Procedure}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.6.1}{Procedure for Part 1}{section.2.6}% 11
+\BOOKMARK [2][-]{subsection.2.6.2}{Procedure for Part 2}{section.2.6}% 12
+\BOOKMARK [2][-]{subsection.2.6.3}{Procedure for Part 3}{section.2.6}% 13
+\BOOKMARK [1][-]{section.2.7}{Code}{chapter.2}% 14
+\BOOKMARK [1][-]{section.2.8}{Demonstration Video}{chapter.2}% 15
+\BOOKMARK [0][-]{chapter.3}{Interrupts and Timers}{}% 16
+\BOOKMARK [1][-]{section.3.1}{Lab Objectives}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.2}{Pre-requisites}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.3}{Problem Statement}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.4}{Relevant Theory}{chapter.3}% 20
+\BOOKMARK [1][-]{section.3.5}{Assembly of Hardware}{chapter.3}% 21
+\BOOKMARK [1][-]{section.3.6}{Procedure}{chapter.3}% 22
+\BOOKMARK [2][-]{subsection.3.6.1}{Procedure for Part 1}{section.3.6}% 23
+\BOOKMARK [2][-]{subsection.3.6.2}{Procedure for Part 2}{section.3.6}% 24
+\BOOKMARK [1][-]{section.3.7}{Code}{chapter.3}% 25
+\BOOKMARK [1][-]{section.3.8}{Demonstration Video}{chapter.3}% 26
+\BOOKMARK [0][-]{chapter.4}{PWM and interfacing Servo Motor}{}% 27
+\BOOKMARK [1][-]{section.4.1}{Lab Objectives}{chapter.4}% 28
+\BOOKMARK [1][-]{section.4.2}{Pre-requisites}{chapter.4}% 29
+\BOOKMARK [1][-]{section.4.3}{Problem Statement}{chapter.4}% 30
+\BOOKMARK [1][-]{section.4.4}{Relevant Theory}{chapter.4}% 31
+\BOOKMARK [1][-]{section.4.5}{Assembly of Hardware}{chapter.4}% 32
+\BOOKMARK [1][-]{section.4.6}{Procedure}{chapter.4}% 33
+\BOOKMARK [1][-]{section.4.7}{Code}{chapter.4}% 34
+\BOOKMARK [1][-]{section.4.8}{Demonstration Video}{chapter.4}% 35
+\BOOKMARK [0][-]{chapter.5}{ADC and Serial Communication}{}% 36
+\BOOKMARK [1][-]{section.5.1}{Lab Objective}{chapter.5}% 37
+\BOOKMARK [1][-]{section.5.2}{Pre-requisite}{chapter.5}% 38
+\BOOKMARK [1][-]{section.5.3}{Problem Statement}{chapter.5}% 39
+\BOOKMARK [1][-]{section.5.4}{Relevant Theory}{chapter.5}% 40
+\BOOKMARK [1][-]{section.5.5}{Procedure}{chapter.5}% 41
+\BOOKMARK [2][-]{subsection.5.5.1}{ For ADC and UART code :}{section.5.5}% 42
+\BOOKMARK [2][-]{subsection.5.5.2}{To create GUI in Python}{section.5.5}% 43
+\BOOKMARK [1][-]{section.5.6}{Code}{chapter.5}% 44
+\BOOKMARK [1][-]{section.5.7}{Demonstration Video}{chapter.5}% 45
+\BOOKMARK [0][-]{chapter.6}{Temperature Sensor\(LM35\) and LCD}{}% 46
+\BOOKMARK [1][-]{section.6.1}{Lab Objective}{chapter.6}% 47
+\BOOKMARK [1][-]{section.6.2}{Pre-requisite}{chapter.6}% 48
+\BOOKMARK [1][-]{section.6.3}{Problem Statement}{chapter.6}% 49
+\BOOKMARK [1][-]{section.6.4}{Relevant Theory}{chapter.6}% 50
+\BOOKMARK [1][-]{section.6.5}{Procedure}{chapter.6}% 51
+\BOOKMARK [2][-]{subsection.6.5.1}{For using LCD in 4 bit mode :}{section.6.5}% 52
+\BOOKMARK [2][-]{subsection.6.5.2}{For external temperature conversion:}{section.6.5}% 53
+\BOOKMARK [2][-]{subsection.6.5.3}{For internal temperature}{section.6.5}% 54
+\BOOKMARK [1][-]{section.6.6}{Code}{chapter.6}% 55
+\BOOKMARK [1][-]{section.6.7}{Demonstration}{chapter.6}% 56
+\BOOKMARK [0][-]{chapter.7}{Project 1:Line follower robot}{}% 57
+\BOOKMARK [1][-]{section.7.1}{Software used}{chapter.7}% 58
+\BOOKMARK [1][-]{section.7.2}{Hardware Parts:}{chapter.7}% 59
+\BOOKMARK [1][-]{section.7.3}{Assembly of hardware:}{chapter.7}% 60
+\BOOKMARK [1][-]{section.7.4}{Flow Chart:}{chapter.7}% 61
+\BOOKMARK [1][-]{section.7.5}{PROCEDURE}{chapter.7}% 62
+\BOOKMARK [1][-]{section.7.6}{Challanges}{chapter.7}% 63
+\BOOKMARK [1][-]{section.7.7}{Future plan}{chapter.7}% 64
+\BOOKMARK [1][-]{section.7.8}{Code}{chapter.7}% 65
+\BOOKMARK [0][-]{chapter.8}{Project Tag}{}% 66
+\BOOKMARK [1][-]{section.8.1}{Hardware parts}{chapter.8}% 67
+\BOOKMARK [1][-]{section.8.2}{Software used}{chapter.8}% 68
+\BOOKMARK [1][-]{section.8.3}{Pin Mapping}{chapter.8}% 69
+\BOOKMARK [1][-]{section.8.4}{Procedure}{chapter.8}% 70
+\BOOKMARK [2][-]{subsection.8.4.1}{To program push buttons and LEDs}{section.8.4}% 71
+\BOOKMARK [2][-]{subsection.8.4.2}{To program 16X2 LCD}{section.8.4}% 72
+\BOOKMARK [2][-]{subsection.8.4.3}{Programming Joystick using ADC}{section.8.4}% 73
+\BOOKMARK [2][-]{subsection.8.4.4}{Programming 128X64 GLCD}{section.8.4}% 74
+\BOOKMARK [2][-]{subsection.8.4.5}{To display movement of Joystick on GLCD}{section.8.4}% 75
+\BOOKMARK [2][-]{subsection.8.4.6}{To control the speed of image on GLCD}{section.8.4}% 76
+\BOOKMARK [1][-]{section.8.5}{Code}{chapter.8}% 77
+\BOOKMARK [1][-]{section.8.6}{Demonstration}{chapter.8}% 78
+\BOOKMARK [1][-]{section.8.7}{Future Work}{chapter.8}% 79
+\BOOKMARK [1][-]{section.8.8}{Challenges}{chapter.8}% 80
