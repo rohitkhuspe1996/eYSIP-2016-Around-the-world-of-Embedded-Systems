@@ -225,8 +225,25 @@ void Timer0IntHandler(void)
 				pui32Data[0]=y;            //storing value of sensor
 				pui32Data[0]=pui32Data[0]+40;  //maximum possible value for white line
 				right();
-				pui32Data[1]=x;
+			
 				SysCtlDelay(6700000);
+				pui32Data[1]=x;
+				ADCSequenceConfigure(ADC0_BASE, 1, ADC_TRIGGER_PROCESSOR, 0);
+	    			ADCSequenceStepConfigure(ADC0_BASE, 1, 0, ADC_CTL_CH1);
+	    			ADCSequenceStepConfigure(ADC0_BASE, 1, 1, ADC_CTL_CH1);
+	    			ADCSequenceStepConfigure(ADC0_BASE, 1, 2, ADC_CTL_CH1);
+	    			ADCSequenceStepConfigure(ADC0_BASE,1,3,ADC_CTL_CH1|ADC_CTL_IE|ADC_CTL_END);
+	    			ADCSequenceEnable(ADC0_BASE,1);
+
+
+	    			ADCIntClear(ADC0_BASE, 1);           
+				ADCProcessorTrigger(ADC0_BASE, 1);              //wait untill conversion is complete
+				while(!ADCIntStatus(ADC0_BASE, 1, false))
+				{
+				}
+
+				ADCSequenceDataGet(ADC0_BASE, 1, ui32ADC0Value);
+				y =  (ui32ADC0Value[0] + ui32ADC0Value[1] + ui32ADC0Value[2] + ui32ADC0Value[3] + 2)/4;
 				left();
 				SysCtlDelay(6700000);    //maximum possible value for black line
 
