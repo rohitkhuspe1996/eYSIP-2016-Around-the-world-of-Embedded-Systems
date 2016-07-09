@@ -1,1 +1,1 @@
-Add your lab solutions here.
+solution for each lab
